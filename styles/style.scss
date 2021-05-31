@@ -110,12 +110,19 @@ body{
     }
     .center_container{
       overflow-y: scroll;
+      margin-right: 10px;
       @include flexBox(column);
       flex: 0.4;
       &::-webkit-scrollbar{
-        width :6px;
-        border: 1px solid #452e65;
+        width :2px;
+        //border: 1px solid #452e65;
       }
+      &::-webkit-scrollbar-thumb {
+        background-color: #452965;    /* color of the scroll thumb */
+        border-radius: 3px;       /* roundness of the scroll thumb */
+        //border: 3px solid orange;  /* creates padding around scroll thumb */
+      }
+      &::-webkit-scrollbar-track {max-height: 50%; height: 50%;}
       .center_experience{
         display: flex;
         flex-direction: column;
@@ -146,8 +153,16 @@ body{
           overflow-y: scroll;
           height: 200px;
           &::-webkit-scrollbar{
-            width :6px;
+            width :5px;
             border: 1px solid #452e65;
+          }
+          &::-webkit-scrollbar-track {
+            //background: orange;        /* color of the tracking area */
+          }
+          &::-webkit-scrollbar-thumb {
+            background-color: #e1e1f9;    /* color of the scroll thumb */
+            border-radius: 3px;       /* roundness of the scroll thumb */
+            //border: 3px solid orange;  /* creates padding around scroll thumb */
           }
           &::-webkit-scrollbar-track {max-height: 50%; height: 50%;}
           .right_log{
